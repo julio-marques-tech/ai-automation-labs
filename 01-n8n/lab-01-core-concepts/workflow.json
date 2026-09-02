@@ -1,0 +1,90 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e25211b3-ee1b-4e48-84a4-32c6754b1d97",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "40b807bf-09f5-4bb1-b04b-7acb22e27dbc",
+              "name": "message",
+              "value": "Hello by n8n!",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "fa6b806e-6257-4506-9f78-4076aa3ea0f8",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "url": "https://jsonplaceholder.typicode.com/todos/1",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        448,
+        0
+      ],
+      "id": "d3b21c9d-0dcd-4d9f-b427-548bc754a9b1",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "fd5e3fa7-3517-4bd7-84a1-147ca7667b2d",
+  "meta": {
+    "instanceId": "2937d23f1bfac444bdd30cf9d0bab362c169e4b2ea7881a4651b9e8d9b91d3e2"
+  },
+  "nodeGroups": [],
+  "id": "MyJyQg7zVGKMW3Hd",
+  "tags": []
+}

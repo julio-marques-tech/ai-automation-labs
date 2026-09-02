@@ -25,3 +25,18 @@ Log of completed labs, technical decisions, and problems solved along the track.
 **Note for future tracks:** explore AWS Bedrock / Azure AI Foundry as
 alternative backends to Claude (relevant given the Azure background) —
 logged in `CLAUDE.md`, AI Agents track.
+
+## Lab 01 — Core Concepts
+
+**Status:** completed (2026-09-02)
+
+**Done:**
+- Built a first workflow: `Manual Trigger → Edit Fields → HTTP Request`
+- Learned nodes, triggers, connections, and executions hands-on in the
+  n8n editor
+- Called a public API (JSONPlaceholder) with the HTTP Request node, the
+  same node type that will connect to Azure DevOps in Lab 02
+- Exported the workflow as JSON — see
+  [lab-01-core-concepts/workflow.json](lab-01-core-concepts/workflow.json)
+
+**Details:** see [lab-01-core-concepts/README.md](lab-01-core-concepts/README.md)
