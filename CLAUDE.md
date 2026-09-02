@@ -1,91 +1,95 @@
-# Labs de IA & Automação — Julio Marques
+# AI & Automation Labs — Julio Marques
 
-## Sobre este projeto
+## About this project
 
-Portfólio de aprendizagem prática em IA aplicada e automação, estruturado em
-labs guiados. Cada lab produz um projeto funcional, documentado e versionado
-neste repositório, servindo como evidência de competência para entrevistas
-e progressão de carreira.
+A hands-on learning portfolio in applied AI and automation, structured as
+guided labs. Each lab produces a working project, documented and versioned
+in this repository, serving as evidence of competence for interviews and
+career progression.
 
-Metodologia: aprender fazendo. Claude guia passo a passo, o trabalho corre
-na máquina local do utilizador (self-hosted quando aplicável), e cada
-entrega é fechada com documentação pronta para portfólio.
+Methodology: learn by doing. Claude guides step by step, the work runs on
+the user's local machine (self-hosted where applicable), and each lab is
+closed with portfolio-ready documentation.
 
-## Trilhas planeadas
+## Planned tracks
 
-1. **n8n** — automação de workflows, self-hosted via Docker (EM CURSO)
-2. **Agentes de IA** — arquitetura de agentes, orquestração (nota futura: explorar Azure AI Foundry / AWS Bedrock como backends alternativos ao Claude, relevante dado o background em Azure)
-3. **RAG** (Retrieval-Augmented Generation) — teoria e aplicação prática
-4. **Skills** — construção e integração de skills reutilizáveis
-5. **FHIR avançado** — aprofundamento, já com base profissional em SPMS
-6. **Salesforce** — fundamentos + trilha Trailhead
-7. **Slack** — integrações e automações
-8. **Fine-tuning** — exploração futura, após bases sólidas
+1. **n8n** — workflow automation, self-hosted via Docker (IN PROGRESS)
+2. **AI Agents** — agent architecture, orchestration (future note: explore Azure AI Foundry / AWS Bedrock as alternative backends to Claude, relevant given the Azure background)
+3. **RAG** (Retrieval-Augmented Generation) — theory and practical application
+4. **Skills** — building and integrating reusable skills
+5. **Advanced FHIR** — deepening existing professional expertise from SPMS
+6. **Salesforce** — fundamentals + Trailhead track
+7. **Slack** — integrations and automations
+8. **Fine-tuning** — future exploration, after solid foundations
 
-Ordem de execução dentro da Trilha n8n: Azure DevOps → Agente de IA simples → Fábrica de Conteúdo.
+Execution order within the n8n track: Azure DevOps → Simple AI Agent → Content Factory.
 
-## Perfil do utilizador
+## User profile
 
-Business/Functional Analyst com ~17 anos de experiência, background sólido em
-FHIR e interoperabilidade em saúde (SPMS, Portugal), agile/BDD, e MCP
-(Azure DevOps, Confluence). Em transição para consultoria de IA.
+Business/Functional Analyst with ~17 years of experience, a solid background
+in FHIR and healthcare interoperability (SPMS, Portugal), agile/BDD, and MCP
+(Azure DevOps, Confluence). Transitioning into AI consulting.
 
-**Importante:** zero experiência prévia em n8n, agentes de IA, RAG, Salesforce,
-Slack API. Trata cada trilha nova como ponto de partida absoluto — não assumir
-conhecimento implícito, mesmo que o utilizador já domine conceitos adjacentes
-(ex: já conhece Azure DevOps via MCP, mas não via n8n).
+**Important:** zero prior experience with n8n, AI agents, RAG, Salesforce,
+or the Slack API. Treat every new track as an absolute starting point — do
+not assume implicit knowledge, even where the user already masters adjacent
+concepts (e.g. already knows Azure DevOps via MCP, but not via n8n).
 
-Prefere entregas estruturadas, prontas a usar, com raciocínio explícito, e
-correção direta quando algo está errado ou mal compreendido.
+Prefers structured, ready-to-use deliverables with explicit reasoning, and
+direct correction when something is wrong or misunderstood.
 
-## COMO TRABALHAR COMIGO NESTE PROJETO (regra fixa, sempre ativa)
+## HOW TO WORK WITH ME ON THIS PROJECT (fixed rule, always active)
 
-Isto é um espaço de **aprendizagem guiada**, não de "codifica e resolve sozinho".
-Segue sempre este modo, salvo pedido explícito em contrário numa sessão:
+This is a space for **guided learning**, not "just code it and solve it
+yourself." Always follow this mode, unless explicitly told otherwise within
+a session:
 
-1. **Explica antes de executar.** Antes de correres qualquer comando ou
-   escreveres código, explica em 2-3 frases o que vai acontecer e porquê.
-2. **Um passo de cada vez.** Não encadeies vários passos de uma vez só.
-   Espera confirmação de que o passo anterior funcionou antes de avançar.
-3. **Prefere guiar a fazer por mim.** Quando fizer sentido pedagogicamente
-   (ex: correr um comando simples, preencher um campo na UI do n8n), pede
-   para EU correr o comando e trazer-te o resultado, em vez de tu correres
-   por mim. Quando for repetitivo/mecânico (ex: criar estrutura de pastas,
-   escrever ficheiros de documentação), podes fazer diretamente.
-4. **Nunca assumas que passou.** Pede sempre confirmação explícita
-   ("funcionou?", "que resultado apareceu?") antes de dares o passo como
-   concluído.
-5. **Regista progresso.** No fim de cada lab, atualiza o PROGRESSO.md da
-   trilha correspondente com: o que foi feito, decisões técnicas tomadas,
-   problemas encontrados e como foram resolvidos.
-6. **Fecha com commit.** No fim de cada lab concluído, propõe o commit
-   (mensagem clara, ex: "Lab 00: instalação Docker + WSL2") e só corres
-   `git add/commit/push` com confirmação minha.
+1. **Explain before executing.** Before running any command or writing any
+   code, explain in 2-3 sentences what is about to happen and why.
+2. **One step at a time.** Do not chain several steps together. Wait for
+   confirmation that the previous step worked before moving on.
+3. **Prefer guiding over doing it for me.** When it makes pedagogical sense
+   (e.g. running a simple command, filling in a field in the n8n UI), ask
+   ME to run the command and bring back the result, instead of running it
+   yourself. When it's repetitive/mechanical (e.g. creating folder
+   structures, writing documentation files), you can do it directly.
+4. **Never assume it worked.** Always ask for explicit confirmation
+   ("did it work?", "what result did you get?") before marking a step as
+   done.
+5. **Log progress.** At the end of each lab, update the corresponding
+   track's PROGRESS.md with: what was done, technical decisions made,
+   problems encountered, and how they were solved.
+6. **Close with a commit.** At the end of each completed lab, propose the
+   commit (clear message, e.g. "Lab 00: Docker + WSL2 installation") and
+   only run `git add/commit/push` with my confirmation.
 
-## Estilo
+## Style
 
-- Português como idioma principal.
-- Direto, sem enrolação. Comandos exatos, copy-paste-ready quando for para
-  eu correr.
-- Corrige-me sem rodeios se algo estiver técnica ou conceptualmente errado.
-- Avaliação honesta de trade-offs (ex: n8n vs. código direto, RAG vs.
-  fine-tuning) — nunca vender a ferramenta da moda sem crítica.
-- Sempre que fizer sentido, liga o lab a como isso se traduziria numa
-  conversa de entrevista ("isto mostra que sabes X, Y").
+- Working conversation language: **Portuguese**. All written deliverables
+  in this repository (READMEs, roadmaps, progress logs, lab docs) are in
+  **English**, since this portfolio targets global teams — but Claude and
+  the user keep talking to each other in Portuguese.
+- Direct, no fluff. Exact, copy-paste-ready commands when I'm meant to run
+  them.
+- Correct me bluntly if something is technically or conceptually wrong.
+- Honest trade-off assessments (e.g. n8n vs. plain code, RAG vs.
+  fine-tuning) — never sell the trendy tool without critique.
+- Whenever it makes sense, connect the lab to how it would translate into
+  an interview conversation ("this shows you know X, Y").
 
-## Estrutura do repositório
+## Repository structure
 
 ```
 /01-n8n/
-  ROADMAP.md              → fases do trilho n8n
-  PROGRESSO.md            → log de labs concluídos
-  lab-00-instalacao/
-  lab-01-conceitos-base/
-  lab-02-azure-devops-conexao/
-  lab-03-workflow-real/
-  lab-04-export-documentacao/
+  ROADMAP.md              → phases of the n8n track
+  PROGRESS.md             → log of completed labs
+  lab-00-setup/
+  lab-01-core-concepts/
+  lab-02-azure-devops-connection/
+  lab-03-real-workflow/
+  lab-04-export-documentation/
 
-/02-agentes-ia/
+/02-ai-agents/
   ROADMAP.md
 
 /03-rag/
@@ -94,7 +98,7 @@ Segue sempre este modo, salvo pedido explícito em contrário numa sessão:
 /04-skills/
   ROADMAP.md
 
-/05-fhir-avancado/
+/05-advanced-fhir/
   ROADMAP.md
 
 /06-salesforce/
@@ -107,11 +111,12 @@ Segue sempre este modo, salvo pedido explícito em contrário numa sessão:
   ROADMAP.md
 ```
 
-Cada pasta de lab, quando terminado, deve conter:
-- Ficheiro/workflow exportado (JSON, script, etc.)
-- README.md específico do lab (o quê, porquê, como correr, o que aprendi)
+Each lab folder, once finished, should contain:
+- Exported file/workflow (JSON, script, etc.)
+- Lab-specific README.md (what, why, how to run, what I learned)
 
-## Estado atual
+## Current status
 
-Trilha ativa: **n8n**, Lab 00 (instalação Docker + WSL2 no Windows).
-Ver `/01-n8n/PROGRESSO.md` para o histórico detalhado assim que existir.
+Active track: **n8n**. Lab 00 (Docker + WSL2 + n8n setup) completed on
+2026-09-02. Next up: Lab 01 (core concepts).
+See `/01-n8n/PROGRESS.md` for the detailed history.

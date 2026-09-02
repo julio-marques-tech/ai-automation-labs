@@ -1,2 +1,2 @@
 # ai-automation-labs
-Portfólio de labs práticos em IA e automação — n8n, agentes, RAG, FHIR, Salesforce e mais
+Portfolio of hands-on AI and automation labs — n8n, agents, RAG, FHIR, Salesforce, and more
