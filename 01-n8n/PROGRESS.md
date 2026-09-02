@@ -40,3 +40,27 @@ logged in `CLAUDE.md`, AI Agents track.
   [lab-01-core-concepts/workflow.json](lab-01-core-concepts/workflow.json)
 
 **Details:** see [lab-01-core-concepts/README.md](lab-01-core-concepts/README.md)
+
+## Lab 02 — Azure DevOps Connection
+
+**Status:** completed (2026-09-02)
+
+**Done:**
+- Created a free, personal Azure DevOps organization and project (kept
+  separate from any employer's tenant)
+- Authenticated n8n to the Azure DevOps REST API via PAT (Basic Auth,
+  generic credential)
+- Built a workflow that queries real work items via WIQL
+  (`Manual Trigger → HTTP Request POST`)
+- Exported the workflow as JSON — see
+  [lab-02-azure-devops-connection/workflow.json](lab-02-azure-devops-connection/workflow.json)
+
+**Technical decisions:**
+- Used the generic HTTP Request node (n8n has no native Azure DevOps
+  connector) — same pattern reusable for any unsupported API
+- PAT scoped to least privilege needed (Work Items: Read, Project and
+  Team: Read)
+
+**Problems and resolution:** PAT scope mismatch caused a 401 on the work
+items endpoint even though a simpler endpoint worked — see detail in
+[lab-02-azure-devops-connection/README.md](lab-02-azure-devops-connection/README.md#problem-encountered-pat-scope-mismatch-401-error)

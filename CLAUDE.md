@@ -117,6 +117,7 @@ Each lab folder, once finished, should contain:
 
 ## Current status
 
-Active track: **n8n**. Lab 00 (Docker + WSL2 + n8n setup) and Lab 01 (core
-concepts) completed on 2026-09-02. Next up: Lab 02 (Azure DevOps connection).
+Active track: **n8n**. Lab 00 (Docker + WSL2 + n8n setup), Lab 01 (core
+concepts), and Lab 02 (Azure DevOps connection) completed on 2026-09-02.
+Next up: Lab 03 (real workflow — simple AI agent).
 See `/01-n8n/PROGRESS.md` for the detailed history.

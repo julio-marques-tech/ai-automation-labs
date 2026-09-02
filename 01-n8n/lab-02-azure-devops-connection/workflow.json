@@ -1,0 +1,68 @@
+{
+  "name": "Lab 02 - Azure DevOps Connection",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a9b1f9e9-3c10-42f3-aa58-0646d07584e9",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dev.azure.com/julio-marques-portfolio/ai-automation-labs/_apis/wit/wiql?api-version=7.1",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"query\": \"Select [System.Id], [System.Title], [System.State] From WorkItems\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "c43646f8-40f1-42b0-8793-d0076c5f9b8c",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "YR1YXveJN02TWUTx",
+          "name": "Azure DevOps PAT"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "5bc69e76-092e-444f-b886-c5f7836d3289",
+  "meta": {
+    "instanceId": "2937d23f1bfac444bdd30cf9d0bab362c169e4b2ea7881a4651b9e8d9b91d3e2"
+  },
+  "nodeGroups": [],
+  "id": "Duo1YWJ8MclLiaxz",
+  "tags": []
+}
