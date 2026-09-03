@@ -92,3 +92,19 @@ values, so the agent initially reported titles as "not available" (did
 not hallucinate) — switched the tool to the `workitemsbatch` endpoint to
 get full field values in one call. See detail in
 [lab-03-simple-ai-agent/README.md](lab-03-simple-ai-agent/README.md#problem-encountered-wiql-only-returns-ids-not-field-values)
+
+## Lab 04 — Export and Documentation
+
+**Status:** completed (2026-09-03)
+
+**Done:**
+- Wrote [01-n8n/README.md](README.md), a track-level overview tying
+  together Labs 00-03 (what each demonstrates, why the progression was
+  scoped that way, skills demonstrated)
+- Updated [ROADMAP.md](ROADMAP.md) to reflect the core track as complete
+- Reframed the early "Content Factory" idea as a future **cross-track
+  capstone** (n8n + AI Agents, possibly RAG) instead of a step within
+  this track — logged in `CLAUDE.md`
+
+**n8n track status:** core labs (00-03) complete. Next active track:
+**AI Agents**.

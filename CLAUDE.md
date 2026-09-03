@@ -22,7 +22,10 @@ closed with portfolio-ready documentation.
 7. **Slack** — integrations and automations
 8. **Fine-tuning** — future exploration, after solid foundations
 
-Execution order within the n8n track: Azure DevOps → Simple AI Agent → Content Factory.
+Execution order within the n8n track: Azure DevOps → Simple AI Agent (both
+done). **Future cross-track capstone:** "Content Factory" — an end-to-end
+automated content pipeline combining n8n with the AI Agents track (and
+possibly RAG), to be tackled once those tracks are further along.
 
 ## User profile
 
@@ -117,8 +120,9 @@ Each lab folder, once finished, should contain:
 
 ## Current status
 
-Active track: **n8n**. Lab 00 (Docker + WSL2 + n8n setup), Lab 01 (core
-concepts), Lab 02 (Azure DevOps connection), and Lab 03 (simple AI agent,
-self-hosted via Ollama) completed. Next up: Lab 04 (export and
-documentation, closing out the track).
-See `/01-n8n/PROGRESS.md` for the detailed history.
+**n8n track complete** (Labs 00-04: setup, core concepts, Azure DevOps
+connection, self-hosted AI agent, export/documentation). See
+`/01-n8n/README.md` for the track overview and `/01-n8n/PROGRESS.md` for
+the detailed history.
+
+Active track: **AI Agents** — not yet started.
