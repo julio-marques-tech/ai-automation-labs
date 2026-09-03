@@ -68,9 +68,8 @@ a session:
 
 ## Style
 
-- Working conversation language: **Portuguese**. All written deliverables
-  in this repository (READMEs, roadmaps, progress logs, lab docs) are in
-  **English**, since this portfolio targets global teams — but Claude and
+- All written deliverables in this repository (READMEs, roadmaps, progress logs, lab docs)
+  are in  **English**, since this portfolio targets global teams — but Claude and
   the user keep talking to each other in Portuguese.
 - Direct, no fluff. Exact, copy-paste-ready commands when I'm meant to run
   them.
