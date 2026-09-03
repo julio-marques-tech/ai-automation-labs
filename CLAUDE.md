@@ -13,7 +13,7 @@ closed with portfolio-ready documentation.
 
 ## Planned tracks
 
-1. **n8n** — workflow automation, self-hosted via Docker (IN PROGRESS)
+1. **n8n** — workflow automation, self-hosted via Docker (COMPLETE)
 2. **AI Agents** — agent architecture, orchestration (future note: explore Azure AI Foundry / AWS Bedrock as alternative backends to Claude, relevant given the Azure background)
 3. **RAG** (Retrieval-Augmented Generation) — theory and practical application
 4. **Skills** — building and integrating reusable skills
@@ -83,16 +83,16 @@ a session:
 
 ```
 /01-n8n/
-  ROADMAP.md              → phases of the n8n track
-  PROGRESS.md             → log of completed labs
+  README.md                → track overview (complete)
+  ROADMAP.md               → phases of the n8n track
+  PROGRESS.md              → log of completed labs
   lab-00-setup/
   lab-01-core-concepts/
   lab-02-azure-devops-connection/
-  lab-03-real-workflow/
-  lab-04-export-documentation/
+  lab-03-simple-ai-agent/
 
 /02-ai-agents/
-  ROADMAP.md
+  ROADMAP.md               → phases of the AI Agents track (IN PROGRESS)
 
 /03-rag/
   ROADMAP.md
