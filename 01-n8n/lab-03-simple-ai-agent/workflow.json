@@ -1,0 +1,128 @@
+{
+  "name": "Lab 03 - Simple AI Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "c07ec40e-ae6d-4daf-aeac-b4ed52c6ba6f",
+      "name": "When chat message received",
+      "webhookId": "33356f47-def0-4b3e-bb80-024c3ce6161d"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "aefe2c29-d367-4e8c-9711-6e3bec7707bb",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "llama3.1:latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        128,
+        224
+      ],
+      "id": "acc0ba18-002b-4dc7-9ac6-cec4d545586c",
+      "name": "Ollama Chat Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "JR32RSkRqnXPCiVz",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to get the current list of Azure DevOps work items, including their ID, title, and state.",
+        "method": "POST",
+        "url": "https://dev.azure.com/julio-marques-portfolio/ai-automation-labs/_apis/wit/workitemsbatch?api-version=7.1",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"ids\": [1, 2, 3, 4],\n  \"fields\": [\"System.Id\", \"System.Title\", \"System.State\"]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.5,
+      "position": [
+        384,
+        208
+      ],
+      "id": "f0cb878f-404f-43a8-ae43-d3bda1985582",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "YR1YXveJN02TWUTx",
+          "name": "Azure DevOps PAT"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "fb964da6-6688-4b56-bc75-b12bd30b33de",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2937d23f1bfac444bdd30cf9d0bab362c169e4b2ea7881a4651b9e8d9b91d3e2"
+  },
+  "nodeGroups": [],
+  "id": "mgQ9XxrZ0IfP8RO4",
+  "tags": []
+}

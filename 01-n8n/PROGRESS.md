@@ -64,3 +64,31 @@ logged in `CLAUDE.md`, AI Agents track.
 **Problems and resolution:** PAT scope mismatch caused a 401 on the work
 items endpoint even though a simpler endpoint worked — see detail in
 [lab-02-azure-devops-connection/README.md](lab-02-azure-devops-connection/README.md#problem-encountered-pat-scope-mismatch-401-error)
+
+## Lab 03 — Simple AI Agent
+
+**Status:** completed (2026-09-03)
+
+**Done:**
+- Installed Ollama on Windows, running Llama 3.1 8B fully locally (no
+  cloud API, no billing)
+- Built an AI Agent workflow in n8n: Chat Trigger → AI Agent (Ollama
+  Chat Model + HTTP Request Tool)
+- Tool connects to the real Azure DevOps project from Lab 02 — agent
+  answers natural-language questions about real work items
+- Exported the workflow as JSON — see
+  [lab-03-simple-ai-agent/workflow.json](lab-03-simple-ai-agent/workflow.json)
+
+**Technical decisions:**
+- Chose Ollama (self-hosted) over a cloud LLM API (Gemini free tier
+  considered) to avoid billing entirely and to build self-hosted LLM
+  deployment experience, relevant given the FHIR/healthcare background
+  (data residency constraints)
+- Llama 3.1 8B chosen for tool-calling support, sized to run acceptably
+  on CPU with 32GB RAM (no dedicated GPU)
+
+**Problems and resolution:** WIQL only returns work item IDs, not field
+values, so the agent initially reported titles as "not available" (did
+not hallucinate) — switched the tool to the `workitemsbatch` endpoint to
+get full field values in one call. See detail in
+[lab-03-simple-ai-agent/README.md](lab-03-simple-ai-agent/README.md#problem-encountered-wiql-only-returns-ids-not-field-values)
