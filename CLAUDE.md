@@ -124,6 +124,7 @@ connection, self-hosted AI agent, export/documentation). See
 `/01-n8n/README.md` for the track overview and `/01-n8n/PROGRESS.md` for
 the detailed history.
 
-Active track: **AI Agents** — Lab 00 (fundamentals and setup) completed
-on 2026-09-04. Next up: Lab 01 (agent from scratch).
+Active track: **AI Agents** — Lab 00 (fundamentals and setup) and Lab 01
+(agent from scratch) completed on 2026-09-04. Next up: Lab 02 (multiple
+tools and orchestration).
 See `/02-ai-agents/PROGRESS.md` for the detailed history.
