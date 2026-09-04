@@ -69,3 +69,26 @@ live external data) — planned for Lab 02. Full detail in
 **Result:** the agent called both tools autonomously and combined their
 results correctly — full detail in
 [lab-02-multi-tool-orchestration/README.md](lab-02-multi-tool-orchestration/README.md#result)
+
+## Lab 03 — Multi-Agent Coordination
+
+**Status:** completed (2026-09-04)
+
+**Done:**
+- Built a lead agent delegating to two specialized subagents
+  (`work-item-analyst`, `report-writer`) via `AgentDefinition` +
+  `ClaudeAgentOptions(agents=...)`
+- Confirmed sequential delegation with a data dependency (report needs
+  the work item data first) works correctly
+
+**Technical decisions:**
+- Gave `report-writer` zero tools, forcing it to work only from data it's
+  handed — a deliberate test of whether it would invent data (it didn't)
+
+**Problem and resolution:** the lead agent ran the second subagent in the
+background on its own initiative; the script didn't wait for it, so the
+result was lost on the first run. Fixed by explicitly instructing both
+subagents to run in the foreground. Full detail in
+[lab-03-multi-agent-coordination/README.md](lab-03-multi-agent-coordination/README.md#problem-encountered-a-subagent-ran-in-the-background-and-its-result-was-lost)
+
+**AI Agents track status:** core labs (00-03) complete.
