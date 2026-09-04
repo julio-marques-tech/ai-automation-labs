@@ -45,3 +45,27 @@ even on a genuinely harder calculation. Reliable autonomous tool choice
 needs a tool providing information the model can't produce itself (e.g.
 live external data) — planned for Lab 02. Full detail in
 [lab-01-agent-from-scratch/README.md](lab-01-agent-from-scratch/README.md#finding-arithmetic-is-a-poor-test-case-for-autonomous-tool-use)
+
+## Lab 02 — Multiple Tools and Orchestration
+
+**Status:** completed (2026-09-04)
+
+**Done:**
+- Built an agent with two tools: real Azure DevOps work item data
+  (reusing the org/project from the n8n track) and the current
+  real-world date/time
+- Moved credentials to a gitignored `.env` file (`python-dotenv`)
+  instead of hardcoding them
+- Confirmed genuine orchestration: the agent chose to call both tools,
+  in a sensible order, and stated its plan in plain text before acting
+
+**Technical decisions:**
+- Picked tools that provide information the model cannot reason its way
+  to (live data, real time) — directly addressing the Lab 01 finding
+  that arithmetic is a weak test case
+- Implemented the Azure DevOps WIQL + `workitemsbatch` two-step call
+  inside the tool itself, so the agent only sees one clean tool call
+
+**Result:** the agent called both tools autonomously and combined their
+results correctly — full detail in
+[lab-02-multi-tool-orchestration/README.md](lab-02-multi-tool-orchestration/README.md#result)
