@@ -14,7 +14,7 @@ closed with portfolio-ready documentation.
 ## Planned tracks
 
 1. **n8n** — workflow automation, self-hosted via Docker (COMPLETE)
-2. **AI Agents** — agent architecture, orchestration (future note: explore Azure AI Foundry / AWS Bedrock as alternative backends to Claude, relevant given the Azure background)
+2. **AI Agents** — agent architecture, orchestration (COMPLETE) (future note: explore Azure AI Foundry / AWS Bedrock as alternative backends to Claude, relevant given the Azure background)
 3. **RAG** (Retrieval-Augmented Generation) — theory and practical application
 4. **Skills** — building and integrating reusable skills
 5. **Advanced FHIR** — deepening existing professional expertise from SPMS
@@ -92,7 +92,13 @@ a session:
   lab-03-simple-ai-agent/
 
 /02-ai-agents/
-  ROADMAP.md               → phases of the AI Agents track (IN PROGRESS)
+  README.md                → track overview (complete)
+  ROADMAP.md               → phases of the AI Agents track
+  PROGRESS.md              → log of completed labs
+  lab-00-fundamentals-setup/
+  lab-01-agent-from-scratch/
+  lab-02-multi-tool-orchestration/
+  lab-03-multi-agent-coordination/
 
 /03-rag/
   ROADMAP.md
@@ -124,8 +130,9 @@ connection, self-hosted AI agent, export/documentation). See
 `/01-n8n/README.md` for the track overview and `/01-n8n/PROGRESS.md` for
 the detailed history.
 
-Active track: **AI Agents** — Labs 00-03 (fundamentals/setup, agent from
-scratch, multi-tool orchestration, multi-agent coordination) completed
-on 2026-09-04. Next up: Lab 04 (comparison and documentation, closing
-out the track).
-See `/02-ai-agents/PROGRESS.md` for the detailed history.
+**AI Agents track complete** (Labs 00-04: fundamentals/setup, agent from
+scratch, multi-tool orchestration, multi-agent coordination, comparison
+and documentation). See `/02-ai-agents/README.md` for the track overview
+and `/02-ai-agents/PROGRESS.md` for the detailed history.
+
+Active track: **RAG** — not yet started.

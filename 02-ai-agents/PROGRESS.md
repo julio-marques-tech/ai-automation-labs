@@ -91,4 +91,22 @@ result was lost on the first run. Fixed by explicitly instructing both
 subagents to run in the foreground. Full detail in
 [lab-03-multi-agent-coordination/README.md](lab-03-multi-agent-coordination/README.md#problem-encountered-a-subagent-ran-in-the-background-and-its-result-was-lost)
 
-**AI Agents track status:** core labs (00-03) complete.
+## Lab 04 — Comparison and Documentation
+
+**Status:** completed (2026-09-05)
+
+**Done:**
+- Wrote [02-ai-agents/README.md](README.md), a track-level overview
+  tying together Labs 00-03
+- Wrote an honest no-code (n8n's AI Agent node) vs. code (Claude Agent
+  SDK) comparison, grounded in what was actually experienced across
+  both tracks — not a generic pros/cons list
+- Updated [ROADMAP.md](ROADMAP.md) to reflect the core track as complete
+
+**Key finding for the comparison:** multi-agent coordination (Lab 03)
+has no equivalent in n8n's AI Agent node — that pattern only became
+available once the work moved to code. Full detail in
+[README.md](README.md#no-code-vs-code-an-honest-comparison)
+
+**AI Agents track status:** core labs (00-04) complete. Next active
+track: **RAG**.
