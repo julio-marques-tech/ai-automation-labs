@@ -14,18 +14,50 @@ closed with portfolio-ready documentation.
 ## Planned tracks
 
 1. **n8n** — workflow automation, self-hosted via Docker (COMPLETE)
-2. **AI Agents** — agent architecture, orchestration (COMPLETE) (future note: explore Azure AI Foundry / AWS Bedrock as alternative backends to Claude, relevant given the Azure background)
-3. **RAG** (Retrieval-Augmented Generation) — theory and practical application
-4. **Skills** — building and integrating reusable skills
-5. **Advanced FHIR** — deepening existing professional expertise from SPMS
-6. **Salesforce** — fundamentals + Trailhead track
-7. **Slack** — integrations and automations
-8. **Fine-tuning** — future exploration, after solid foundations
+2. **AI Agents** — agent architecture, orchestration (COMPLETE)
+3. **RAG** (Retrieval-Augmented Generation) — theory and practical application (IN PROGRESS)
+4. **Prompt Engineering** — advanced prompting strategies, evaluation/
+   benchmarking, lifecycle/governance (added after analyzing 3 real job
+   postings the user is targeting — see note below)
+5. **Fine-tuning** — functional understanding of the AI model lifecycle
+   (training, fine-tuning, inference), with a light hands-on fine-tune of
+   a small local model. Moved up in priority (was originally last) since
+   it appears explicitly in 2 of the 3 target job postings
+6. **Skills** — building and integrating reusable skills
+7. **Advanced FHIR** — deepening existing professional expertise from SPMS
+8. **Salesforce** — fundamentals + Trailhead track
+9. **Slack** — integrations and automations
 
 Execution order within the n8n track: Azure DevOps → Simple AI Agent (both
 done). **Future cross-track capstone:** "Content Factory" — an end-to-end
 automated content pipeline combining n8n with the AI Agents track (and
 possibly RAG), to be tackled once those tracks are further along.
+
+### Job-posting-driven scope (2026-09-07)
+
+The user shared 3 real job postings they're targeting (Prompt Engineer @
+Hitachi Energy — industrial/GenAI; Prompt/Agent role @ eXperience IT
+Solutions, Spain, remote; Analista Funcional GenAI @ Soltel Group). Cross-
+referencing them against the existing roadmap led to:
+- Adding the **Prompt Engineering** track (zero-shot/few-shot/Chain-of-
+  Thought/ReAct, prompt chaining, context injection, evaluation &
+  benchmarking, prompt lifecycle/versioning/governance, Responsible AI)
+- Reprioritizing **Fine-tuning** to come right after Prompt Engineering
+- Explicit low-effort additions decided to close remaining gaps:
+  - Actually use **MLflow** (not just describe it) in Prompt Engineering's
+    benchmarking lab
+  - Produce at least one **UML/BPMN-style architecture diagram** somewhere
+    in the upcoming tracks
+  - Pull and try **Mistral or Gemma via Ollama** (in addition to Llama) for
+    model variety in benchmarking
+  - Touch **Azure AI Foundry** hands-on (even minimally), not leave it as
+    just a note
+
+**Honest gaps flagged and accepted as out of scope:** Kubernetes, OAuth2/
+Keycloak/LDAP, Jira, Confluence (specific tools, not AI skills — learnable
+on the job) and the Hitachi posting's electrical-engineering/transformer-
+industry domain requirement (a hard mismatch no portfolio project can
+close).
 
 ## User profile
 
@@ -103,19 +135,22 @@ a session:
 /03-rag/
   ROADMAP.md
 
-/04-skills/
+/04-prompt-engineering/
   ROADMAP.md
 
-/05-advanced-fhir/
+/05-fine-tuning/
   ROADMAP.md
 
-/06-salesforce/
+/06-skills/
   ROADMAP.md
 
-/07-slack/
+/07-advanced-fhir/
   ROADMAP.md
 
-/08-fine-tuning/
+/08-salesforce/
+  ROADMAP.md
+
+/09-slack/
   ROADMAP.md
 ```
 
