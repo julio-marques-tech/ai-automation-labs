@@ -170,6 +170,7 @@ scratch, multi-tool orchestration, multi-agent coordination, comparison
 and documentation). See `/02-ai-agents/README.md` for the track overview
 and `/02-ai-agents/PROGRESS.md` for the detailed history.
 
-Active track: **RAG** — Lab 00 (scoping and fundamentals) completed on
-2026-09-06. Next up: Lab 01 (real RAG pipeline over FHIR documentation).
+Active track: **RAG** — Lab 00 (scoping and fundamentals) and Lab 01
+(real RAG pipeline over FHIR documentation) completed on 2026-09-08.
+Next up: Lab 02 (answer quality and trust — citations, retrieval tuning).
 See `/03-rag/PROGRESS.md` for the detailed history.

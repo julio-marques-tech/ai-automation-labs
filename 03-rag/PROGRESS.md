@@ -25,3 +25,26 @@ Log of completed labs, technical decisions, and problems solved along the track.
   non-goals
 
 **Details:** see [lab-00-scoping-fundamentals/README.md](lab-00-scoping-fundamentals/README.md)
+
+## Lab 01 — Real RAG Pipeline
+
+**Status:** completed (2026-09-08)
+
+**Done:**
+- Fetched 3 real HL7 FHIR R4 resource pages (Patient, Observation,
+  Encounter) as the corpus
+- Built `ingest.py` (chunk + embed + store in Chroma) and `query.py`
+  (retrieve + ask Claude, grounded, with citations)
+- Verified grounded, cited answers on an in-corpus question
+  (`Patient.gender`) and an honest refusal on an out-of-corpus question
+  (`Condition.severity` — that resource was never ingested)
+
+**Technical decisions:**
+- Paragraph-grouped chunking (~800 chars) instead of arbitrary
+  fixed-length cuts, to keep chunks semantically coherent
+- Explicit prompt instruction to cite sources and refuse ungrounded
+  answers — not automatic just from retrieving relevant text
+
+**Result:** both scoping-note success criteria (traceable citations,
+honest "don't know") held on first real test. Full detail in
+[lab-01-fhir-rag-pipeline/README.md](lab-01-fhir-rag-pipeline/README.md#results)

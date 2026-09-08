@@ -3,6 +3,9 @@
 __pycache__/
 *.pyc
 
+# Generated vector databases
+chroma_db/
+
 # Secrets
 .env
 
