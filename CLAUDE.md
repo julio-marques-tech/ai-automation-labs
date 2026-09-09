@@ -13,6 +13,11 @@ closed with portfolio-ready documentation.
 
 ## Planned tracks
 
+0. **Python Fundamentals** — programming from zero (syntax, data
+   structures, functions, OOP, files/JSON, virtual environments, calling
+   an API), with each block closing in a small exercise tied to a
+   concrete AI-track use case rather than a generic textbook exercise
+   (IN PROGRESS — see note below)
 1. **n8n** — workflow automation, self-hosted via Docker (COMPLETE)
 2. **AI Agents** — agent architecture, orchestration (COMPLETE)
 3. **RAG** (Retrieval-Augmented Generation) — theory and practical application (IN PROGRESS)
@@ -58,6 +63,20 @@ Keycloak/LDAP, Jira, Confluence (specific tools, not AI skills — learnable
 on the job) and the Hitachi posting's electrical-engineering/transformer-
 industry domain requirement (a hard mismatch no portfolio project can
 close).
+
+### Python Fundamentals track (2026-09-09)
+
+User has zero prior Python experience and wants to learn it from scratch,
+explicitly to support the other AI tracks (RAG, AI Agents, Prompt
+Engineering, Fine-tuning) rather than as an isolated CS course. Structured
+as its own guided track (`00-python-fundamentals/`, prefixed `00` since
+it's a prerequisite studied alongside/before the other tracks) following
+the same lab methodology as the rest of the repo. Scope decided with the
+user: general fundamentals (syntax → data structures → functions/OOP →
+files/modules/venv → calling an API), each block closing with a small
+exercise tied to a concrete AI-track use case (e.g. parsing a FHIR-like
+JSON record, modeling an Agent-style class, calling a REST API) instead of
+generic textbook exercises.
 
 ## User profile
 
@@ -114,6 +133,17 @@ a session:
 ## Repository structure
 
 ```
+/00-python-fundamentals/
+  ROADMAP.md               → phases of the Python Fundamentals track
+  PROGRESS.md              → log of completed labs
+  lab-00-setup/
+  lab-01-core-syntax-data-types/
+  lab-02-control-flow-functions/
+  lab-03-data-structures/
+  lab-04-files-modules-venv/
+  lab-05-oop-basics/
+  lab-06-apis-capstone/
+
 /01-n8n/
   README.md                → track overview (complete)
   ROADMAP.md               → phases of the n8n track
@@ -159,6 +189,11 @@ Each lab folder, once finished, should contain:
 - Lab-specific README.md (what, why, how to run, what I learned)
 
 ## Current status
+
+**Python Fundamentals track started** (2026-09-09) — running in parallel
+with RAG as a prerequisite skill-building track. Lab 00 (setup) not yet
+started. See `/00-python-fundamentals/PROGRESS.md` for the detailed
+history.
 
 **n8n track complete** (Labs 00-04: setup, core concepts, Azure DevOps
 connection, self-hosted AI agent, export/documentation). See
