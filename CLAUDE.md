@@ -32,6 +32,20 @@ closed with portfolio-ready documentation.
 7. **Advanced FHIR** — deepening existing professional expertise from SPMS
 8. **Salesforce** — fundamentals + Trailhead track
 9. **Slack** — integrations and automations
+10. **BDD & Test Automation** — Gherkin feature file craft → executable
+    specs (`pytest-bdd`) → Playwright browser automation → Cucumber-JVM in
+    Eclipse on Linux → BDD for AI systems → living documentation in CI
+    (added 2026-09-26, job-posting driven — see note below)
+11. **SQL & Data Modeling** — structured refresher: PostgreSQL via Docker,
+    data modeling/ER, joins/aggregation, analytical SQL and data
+    validation, SQL from Python + `pgvector` bridge to RAG (added
+    2026-09-26, job-posting driven — see note below)
+12. **Cloud & Containers (AWS + Kubernetes)** — AWS foundations via AWS
+    Cloud Quest: Cloud Practitioner (documented per quest in the repo),
+    Dockerfiles, Kubernetes core concepts on a local `kind` cluster,
+    deploying an own AI service on it, mapping to AWS (EKS/ECS/Lambda/
+    Bedrock/SageMaker) with an architecture diagram (added 2026-09-29 —
+    see note below)
 
 Execution order within the n8n track: Azure DevOps → Simple AI Agent (both
 done). **Future cross-track capstone:** "Content Factory" — an end-to-end
@@ -58,7 +72,8 @@ referencing them against the existing roadmap led to:
   - Touch **Azure AI Foundry** hands-on (even minimally), not leave it as
     just a note
 
-**Honest gaps flagged and accepted as out of scope:** Kubernetes, OAuth2/
+**Honest gaps flagged and accepted as out of scope:** Kubernetes (revisited
+2026-09-29 — now covered at explain-and-reason depth by track 12), OAuth2/
 Keycloak/LDAP, Jira, Confluence (specific tools, not AI skills — learnable
 on the job) and the Hitachi posting's electrical-engineering/transformer-
 industry domain requirement (a hard mismatch no portfolio project can
@@ -77,6 +92,40 @@ files/modules/venv → calling an API), each block closing with a small
 exercise tied to a concrete AI-track use case (e.g. parsing a FHIR-like
 JSON record, modeling an Agent-style class, calling a REST API) instead of
 generic textbook exercises.
+
+### BDD and SQL tracks (2026-09-26)
+
+Driven by a Functional/Business Analyst posting (DBServices PT —
+international projects; requires solid SQL, data modeling, user stories
+with acceptance criteria, BDD/Gherkin feature files, technical analysis
+of Java/C# web systems, Kanban; desirable: Linux, Eclipse, Cucumber).
+Starting levels stated by the user:
+- **Gherkin:** already writes scenarios (with Atlassian Rovo) with a
+  consolidated structure, but only as documentation inside Use Cases at
+  SPMS — never executed, integrated, or automated (e.g. no Playwright).
+  So the BDD track starts at intermediate on writing and zero on
+  execution; its through-line is closing exactly that gap.
+- **SQL:** rusty. Prior exposure was as business/functional analyst on
+  ODI/ODS and QlikView/Qlik Sense projects in Brazil — knows data
+  structures conceptually, not senior hands-on. Treated as a refresher,
+  and kept as its own track (not a lab inside BDD) because SQL is a hard
+  requirement and also feeds RAG (`pgvector`).
+Labs that need no Python (BDD Lab 00, SQL Labs 00-03) can start
+immediately, in parallel with the Python track.
+
+### Cloud & Containers track (2026-09-29)
+
+User noticed the market repeatedly asks for Kubernetes/orchestration and
+AWS knowledge, and was already doing AWS Cloud Quest: Cloud Practitioner
+on Skill Builder. Decision: Cloud Quest alone doesn't cover Kubernetes and
+leaves nothing on GitHub, so a dedicated track was created. Depth is
+deliberately **consultant/analyst** (explain, reason about trade-offs, one
+hands-on deployment) — not cluster administration or CKA/CKAD. Everything
+runs on a **local cluster** (`kind`); no real EKS, to avoid cost/runaway-
+bill risk. Lab 00 (Cloud Quest, documented per quest) can start now;
+Labs 01-05 are sequenced after Python Lab 04 and the RAG track progress,
+to limit dispersion across too many parallel tracks. Optional CLF-C02
+certification after Lab 00.
 
 ## User profile
 
@@ -182,6 +231,18 @@ a session:
 
 /09-slack/
   ROADMAP.md
+
+/10-bdd-test-automation/
+  ROADMAP.md
+  PROGRESS.md
+
+/11-sql-data-modeling/
+  ROADMAP.md
+  PROGRESS.md
+
+/12-cloud-containers/
+  ROADMAP.md
+  PROGRESS.md
 ```
 
 Each lab folder, once finished, should contain:
@@ -204,6 +265,14 @@ the detailed history.
 scratch, multi-tool orchestration, multi-agent coordination, comparison
 and documentation). See `/02-ai-agents/README.md` for the track overview
 and `/02-ai-agents/PROGRESS.md` for the detailed history.
+
+**BDD & Test Automation and SQL & Data Modeling tracks added**
+(2026-09-26) — roadmaps defined, no labs started yet. See their
+`ROADMAP.md` files.
+
+**Cloud & Containers track added** (2026-09-29) — roadmap defined; Lab 00
+(AWS Cloud Quest) in progress on Skill Builder ("Cloud Computing
+Essentials" started). See `/12-cloud-containers/ROADMAP.md`.
 
 Active track: **RAG** — Lab 00 (scoping and fundamentals) and Lab 01
 (real RAG pipeline over FHIR documentation) completed on 2026-09-08.
