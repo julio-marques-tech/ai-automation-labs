@@ -20,8 +20,8 @@ and fixed along the way, included).
 | 07 | Advanced FHIR | Not started |
 | 08 | Salesforce | Not started |
 | 09 | Slack | Not started |
-| 10 | [BDD & Test Automation](10-bdd-test-automation/) — Gherkin, pytest-bdd, Playwright, Cucumber, CI | Not started |
-| 11 | [SQL & Data Modeling](11-sql-data-modeling/) — PostgreSQL, modeling, analytical SQL, data validation | Not started |
+| 10 | BDD & Test Automation | Moved to [functional-analysis-lab](https://github.com/julio-marques-tech/functional-analysis-lab) |
+| 11 | SQL & Data Modeling | Moved to [functional-analysis-lab](https://github.com/julio-marques-tech/functional-analysis-lab) |
 | 12 | [Cloud & Containers](12-cloud-containers/) — AWS foundations, Docker, Kubernetes, deploying AI services | Not started |
 
 Each completed track has its own `README.md` (overview and key

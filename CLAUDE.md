@@ -32,14 +32,12 @@ closed with portfolio-ready documentation.
 7. **Advanced FHIR** — deepening existing professional expertise from SPMS
 8. **Salesforce** — fundamentals + Trailhead track
 9. **Slack** — integrations and automations
-10. **BDD & Test Automation** — Gherkin feature file craft → executable
-    specs (`pytest-bdd`) → Playwright browser automation → Cucumber-JVM in
-    Eclipse on Linux → BDD for AI systems → living documentation in CI
-    (added 2026-09-26, job-posting driven — see note below)
-11. **SQL & Data Modeling** — structured refresher: PostgreSQL via Docker,
-    data modeling/ER, joins/aggregation, analytical SQL and data
-    validation, SQL from Python + `pgvector` bridge to RAG (added
-    2026-09-26, job-posting driven — see note below)
+10. **BDD & Test Automation** — MOVED (2026-10-01) to the separate
+    repository `functional-analysis-lab` (local:
+    `Projetos Pessoais/functional-analysis-lab`). Folder here is only a pointer.
+11. **SQL & Data Modeling** — MOVED (2026-10-01) to `functional-analysis-lab`,
+    now Oracle-based (Oracle Database Free) instead of PostgreSQL. Folder here
+    is only a pointer.
 12. **Cloud & Containers (AWS + Kubernetes)** — AWS foundations via AWS
     Cloud Quest: Cloud Practitioner (documented per quest in the repo),
     Dockerfiles, Kubernetes core concepts on a local `kind` cluster,
@@ -110,8 +108,11 @@ Starting levels stated by the user:
   structures conceptually, not senior hands-on. Treated as a refresher,
   and kept as its own track (not a lab inside BDD) because SQL is a hard
   requirement and also feeds RAG (`pgvector`).
-Labs that need no Python (BDD Lab 00, SQL Labs 00-03) can start
-immediately, in parallel with the Python track.
+**Update 2026-10-01:** both tracks moved to the new repository
+`functional-analysis-lab`, built around one functional-analysis case study
+(data modeling, data architecture, requirements, Oracle/SQL, BDD with
+Cucumber/Playwright, methodologies, Git/SVN). Its own CLAUDE.md (local
+only, not committed) holds the details.
 
 ### Cloud & Containers track (2026-09-29)
 
@@ -232,13 +233,8 @@ a session:
 /09-slack/
   ROADMAP.md
 
-/10-bdd-test-automation/
-  ROADMAP.md
-  PROGRESS.md
-
-/11-sql-data-modeling/
-  ROADMAP.md
-  PROGRESS.md
+/10-bdd-test-automation/   → pointer to functional-analysis-lab
+/11-sql-data-modeling/     → pointer to functional-analysis-lab
 
 /12-cloud-containers/
   ROADMAP.md
@@ -266,9 +262,9 @@ scratch, multi-tool orchestration, multi-agent coordination, comparison
 and documentation). See `/02-ai-agents/README.md` for the track overview
 and `/02-ai-agents/PROGRESS.md` for the detailed history.
 
-**BDD & Test Automation and SQL & Data Modeling tracks added**
-(2026-09-26) — roadmaps defined, no labs started yet. See their
-`ROADMAP.md` files.
+**BDD & Test Automation and SQL & Data Modeling** — moved on 2026-10-01
+to the separate repository `functional-analysis-lab` (warm-up with behave
+migrated there too).
 
 **Cloud & Containers track added** (2026-09-29) — roadmap defined; Lab 00
 (AWS Cloud Quest) in progress on Skill Builder ("Cloud Computing
