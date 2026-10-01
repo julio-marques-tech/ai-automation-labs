@@ -23,7 +23,7 @@ Labs 01 e 02 da trilha (`pytest-bdd` + Playwright).
 ## Estrutura
 
 ```
-interview-warmup/
+warmup-behave/
 ├── features/
 │   ├── pedido_abono.feature      ← especificação em Gherkin (português)
 │   └── steps/
@@ -35,7 +35,7 @@ interview-warmup/
 ## Como correr
 
 ```powershell
-cd 10-bdd-test-automation\interview-warmup
+cd 10-bdd-test-automation\warmup-behave
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -174,31 +174,6 @@ Cucumber.
 | 2 | `Program 'behave.exe' failed to run: An Application Control policy has blocked this file` | O Windows (Smart App Control) bloqueia executáveis sem assinatura, como o atalho `behave.exe` que o `pip` cria no `venv` | Correr como módulo: `python -m behave`. O `python.exe` é assinado e permitido. **Não** se desativa a política de segurança |
 | 3 | Passo que deixaria de ter correspondência (*undefined*) | O texto do passo tem de coincidir **exatamente** com o da step definition. Escrevi "é informado **que**" na feature, e a forma correta é "é informado **de que**" | Corrigido nos **dois** sítios (feature e código). Lição: a consistência da escrita do analista afeta diretamente quem automatiza |
 | 4 | Linhas duplicadas na saída do terminal | O formatador do `behave` reescreve a linha com cor quando o passo termina, e o terminal do VS Code mostra as duas versões | Nenhuma. É apenas visual, não afeta o resultado |
-
-## Lacunas de conhecimento identificadas
-
-Este warm-up fez parte de uma sessão de preparação para entrevistas de Analista Funcional,
-com simulação de perguntas técnicas. Registo aqui as lacunas que apareceram, e a correção
-de cada uma, porque fazem parte do processo de aprendizagem:
-
-- **SQL: validar uma regra de negócio.** Escrevi um `INNER JOIN` pelas chaves primárias
-  (`pedido.id = pagamento.id`). Há dois erros: o JOIN faz-se pela **chave estrangeira**
-  (`pagamento.pedido_id = pedido.id`), e numa validação procuram-se as **violações**, com o
-  padrão `LEFT JOIN ... WHERE pagamento.id IS NULL`. Zero linhas = regra cumprida.
-- **SQL: `WHERE` vs `HAVING`.** O `WHERE` filtra linhas antes de agrupar; o `HAVING` filtra
-  grupos depois do `GROUP BY` e é o único que aceita agregações.
-- **Testes: reteste vs regressão.** O reteste volta a correr o teste que falhou, depois da
-  correção. A regressão confirma que a correção não partiu outra coisa.
-- **BPMN: gateway paralelo vs inclusivo.** O paralelo (AND) segue **todos** os caminhos, sem
-  condição. "Um ou mais caminhos conforme condições" é o inclusivo (OR).
-- **UML ≠ BPMN.** Os diagramas de casos de uso, sequência e atividades são UML, não BPMN.
-- **INVEST** (Independent, Negotiable, Valuable, Estimable, Small, Testable) é um checklist
-  de qualidade de uma user story, não um método de priorização.
-- **Gherkin: `Scenario` vs `Scenario Outline`.** O outline é um modelo com `<variáveis>`
-  que corre uma vez por linha de `Examples`. Só se usa quando o comportamento é o mesmo e só
-  os dados mudam.
-- **Tags vs hooks.** `@smoke` ou `@bloqueado` são tags no ficheiro `.feature`. `@Before` e
-  `@After` são hooks no código de automação. Coisas diferentes com o mesmo `@`.
 
 ## O que aprendi
 

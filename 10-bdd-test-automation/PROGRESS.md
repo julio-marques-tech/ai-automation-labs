@@ -5,7 +5,6 @@ Log of completed labs, technical decisions, and problems solved along the track.
 ## Warm-up — First executable feature file with `behave`
 
 **Status:** completed (2026-09-30) — off-roadmap, done ahead of Lab 00
-during interview preparation
 
 **Done:**
 - Wrote a Portuguese-language feature file (`# language: pt`) with tags,
@@ -34,7 +33,7 @@ during interview preparation
 - Step text must match the step definition exactly — a wording fix in the
   feature ("informado de que") had to be applied to the code as well
 
-**Details:** see [interview-warmup/README.md](interview-warmup/README.md)
+**Details:** see [warmup-behave/README.md](warmup-behave/README.md)
 (in Portuguese for now; English version pending)
 
 Next up: Lab 00 (feature file craft).
